@@ -4,6 +4,119 @@
 
 body {
      font-family: "Inter", sans-serif;
-     @apply bg-isabelline
+     /* font-family: 'Quicksand'; */
+     @apply bg-isabelline text-quartz;
 }
 
+.btn-primary {
+     @apply bg-fireOpal px-8 py-2 rounded-lg text-white hover:opacity-[0.8] transition;
+     background: transparent linear-gradient(134deg, #D94C52 0%, #FF5A60F5 100%) 0% 0% no-repeat padding-box;
+     box-shadow: -4px -4px 8px #F7F0E9D6;
+}
+  
+/* width */
+::-webkit-scrollbar {
+     @apply w-[0.24rem] h-[0.24rem];
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+     @apply bg-[#f1f1f1];
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+     @apply bg-[#888];
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+     @apply bg-[#555];
+}
+
+/* title  */
+.title {
+     @apply text-[33px] leading-10 text-[#4b4b4b] relative font-bold;
+     font-family: 'Ranika';   
+}
+
+.title::after {
+     @apply left-0 top-[1.85rem] w-[16rem] h-[1.5rem] bg-no-repeat absolute z-[-1];
+     content: "";
+     background: url('../images/orange_underline1.png');
+}
+
+nav {
+     @apply flex items-center justify-between flex-wrap p-6 pl-12 relative;
+}
+
+.nav-list {
+     @apply flex flex-col text-sm md:flex-grow;
+}
+
+.nav-list ul li {
+     @apply py-2;
+}
+
+.nav-list ul li::before{
+     content: "";
+     transform: translate(10px, 10px);
+     @apply absolute left-0 border-t border-black w-6;
+}
+
+.nav-list ul li::after {
+     content: ""; 
+     transform: translate(10px, -38px);
+     @apply absolute left-0 border-l border-black h-12;
+}
+
+.details-card {
+     @apply px-8 py-8 pl-[3.5rem] rounded-[10px] relative;
+     box-shadow: 3px 5px 15px #85858529;
+}
+
+.details-card::after {
+     @apply bg-no-repeat right-0 top-0 w-[6rem] h-[6rem] absolute;
+     content: "";
+     background: url('../images/icons/listing-ball.svg');
+     transform: translate(52px, -50px)
+}
+
+.details-card ul li {
+     @apply pb-2 relative text-sm;
+}
+
+.details-card ul li::before {
+     @apply left-[-27px] top-1 w-4 h-4 bg-no-repeat absolute;
+     content: "";
+     background: url('../images/icons/checkmark-circle.svg');
+}
+
+.data-lists {
+     @apply grid grid-cols-5 maxLg:grid-cols-4 p-6 gap-10;
+}
+
+.data-lists li {
+     @apply text-sm;
+}
+
+.how-works {
+     @apply flex gap-7 w-full mt-6;
+}
+
+.how-works div { 
+     @apply p-6 w-1/4 rounded-lg relative flex flex-col justify-end;
+     box-shadow: 3px 5px 15px #70707033;
+}
+.how-works div h2 {
+     @apply text-[33px] leading-10;
+}
+
+.how-works div p {
+     @apply  mt-2;
+}
+
+.how-works div span {
+     @apply text-[#EB4F55] text-6xl absolute right-4 top-4;
+     font-family: 'Ranika';   
+}

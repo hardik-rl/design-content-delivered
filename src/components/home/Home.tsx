@@ -1,14 +1,88 @@
+import Navbar from "../navbar/Navbar";
 
 const Home = () => {
     return (
-        <div>
-            <div>
-            <a href="#"><svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" className="octicon octicon-mark-github v-align-middle color-fg-default">
-                <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
-            </svg></a>
-            </div>
-        </div>
+        <>
+            <section className="flex gap-7 maxLg:flex-wrap">
+                <div className="w-[70%]">
+                <div className="flex justify-between pr-16">
+                    <div>
+                        <Navbar />
+                    </div>
+                    <div className="text-right mt-14">
+                        <h2 className="text-2xl font-medium">Design. Content. Delivered.</h2>
+                        <p className="text-xl py-5">Your solution to your <br /> unlimited design and content needs.</p>
+                        <button className="btn-primary">see plans</button>
+                    </div>
+                </div>
+                <div className="bg-[#F0EBE6] w-[100%] rounded-[10px]">
+                    <ul className="data-lists">
+                        <li>branding</li>
+                        <li>blog posts</li>
+                        <li>packaging</li>
+                        <li>stationery</li>
+                        <li>web apps</li>
+                        <li>landing pages</li>
+                        <li>emails</li>
+                        <li>product descriptions</li>
+                        <li>posters/covers</li>
+                        <li>newsletters</li>
+                        <li>Sales Funnels</li>
+                        <li>ad Creatives</li>
+                        <li>SEO</li>
+                        <li>social media</li>
+                        <li>ghost writing</li>
+                        <li>Mobile Apps</li>
+                        <li>ebooks</li>
+                        <li>Websites</li>
+                        <li>product pages</li>
+                        <li>and more...</li>
+                    </ul>
+                </div>
+                </div>
+                <div className="w-[30%] mt-14">
+
+                    <div className="details-card">
+                        <ul>
+                            <li>One Subscription for all your needs</li>
+                            <li>Unlimited Design and content Requests</li>
+                            <li>Average 2-5 day delivery</li>
+                            <li>Pause or Cancel anytime</li>
+                            <li>1: 1 async communication</li>
+                            <li>No hiring required</li>
+                            <li>No Contracts</li>
+                            <li>No Meetings</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section className="mt-14">
+                <h2 className="title">how it works</h2>
+                <div className="how-works">
+                    <div>
+                        <h2>subscribe</h2>
+                        <p>Select your ideal plan. Start hassle-free, no strings attached..</p>
+                        <span>1</span>
+                    </div>
+                    <div>
+                    <h2>list tasks</h2>
+                        <p>Tell us what you need; we'll handle the rest. Pour out all your design needs.</p>
+                        <span>2</span>
+                    </div>
+                    <div>
+                    <h2>revise</h2>
+                        <p>Enjoy the freedom of unlimited revisions, ensuring each detail aligns with your vision.</p>
+                        <span>3</span>
+                    </div>
+                    <div>
+                    <h2>get <br/> delivery</h2>
+                        <p>Receive designs within 2-5 days or less ensuring your satisfaction with every delivery.</p>
+                        <span>4</span>
+                    </div>
+                </div>
+            </section>
+        </>
     )
 }
 
-export default Home
+export default Home;

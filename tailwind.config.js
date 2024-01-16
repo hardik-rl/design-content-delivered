@@ -5,6 +5,8 @@ export default {
     extend: {
       colors: {
         isabelline: "#F7F0E9",
+        fireOpal: "#EB4F55",
+        quartz: "#4B4B4B"
       },
       screens: {
         sm: "640px",

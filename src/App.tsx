@@ -6,7 +6,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className='max-w-[1640px] mx-auto px-[140px] py-12'>
+    <div className='max-w-[1640px] mx-auto px-[100px] py-12'>
       <Home />
     </div>
   )
