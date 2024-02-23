@@ -13,7 +13,12 @@ body {
      background: transparent linear-gradient(134deg, #D94C52 0%, #FF5A60F5 100%) 0% 0% no-repeat padding-box;
      box-shadow: -4px -4px 8px #F7F0E9D6;
 }
-  
+
+/* font  */
+.font-ranika {
+     font-family: 'Ranika';
+}  
+
 /* width */
 ::-webkit-scrollbar {
      @apply w-[0.24rem] h-[0.24rem];
@@ -41,13 +46,20 @@ body {
 }
 
 .title::after {
-     @apply left-0 top-[1.85rem] w-[16rem] h-[1.5rem] bg-no-repeat absolute z-[-1];
+     @apply left-0 top-[1.55rem] w-[16rem] h-[1.5rem] bg-no-repeat absolute z-[-1];
      content: "";
      background: url('../images/orange_underline1.png');
 }
 
 nav {
-     @apply flex items-center justify-between flex-wrap p-6 pl-12 relative;
+     @apply flex items-center justify-between flex-wrap md:p-6 md:pl-12 relative;
+     /* background: #eee;
+     position: absolute;
+     width: 100%;
+     left: 0;
+     top: 0;
+     height: 100%;
+     z-index: 1; */
 }
 
 .nav-list {
@@ -82,8 +94,15 @@ nav {
      transform: translate(52px, -50px)
 }
 
+@media (max-width: 767px) {
+     .details-card::after {
+     @apply right-[23px] top-[15px] w-[4rem] h-[4rem];
+       background: url('../images/icons/small-listing-ball.svg'); 
+     }
+   }
+
 .details-card ul li {
-     @apply pb-2 relative text-sm;
+     @apply mb-7 relative text-sm last:mb-0;
 }
 
 .details-card ul li::before {
@@ -93,7 +112,7 @@ nav {
 }
 
 .data-lists {
-     @apply grid grid-cols-5 maxLg:grid-cols-4 p-6 gap-10;
+     @apply grid grid-cols-5 lg:!grid-cols-4 p-6 gap-[1.8rem] maxMd:grid-cols-3 maxSm:!grid-cols-2;
 }
 
 .data-lists li {
@@ -104,19 +123,125 @@ nav {
      @apply flex gap-7 w-full mt-6;
 }
 
-.how-works div { 
-     @apply p-6 w-1/4 rounded-lg relative flex flex-col justify-end;
-     box-shadow: 3px 5px 15px #70707033;
-}
-.how-works div h2 {
-     @apply text-[33px] leading-10;
+.how-works .card { 
+     @apply p-6 w-[33%] maxLg:w-[50%] rounded-lg flex flex-col justify-end shadow-cardShadow; 
 }
 
-.how-works div p {
+.how-works .card h2 {
+     @apply text-[33px] leading-10 font-ranika relative;
+}
+
+.how-works .card p {
      @apply  mt-2;
 }
 
-.how-works div span {
-     @apply text-[#EB4F55] text-6xl absolute right-4 top-4;
-     font-family: 'Ranika';   
+.how-works .card span {
+     @apply text-[#EB4F55] text-6xl maxXl:text-3xl absolute right-0 top-[-20px] font-ranika;
 }
+
+.cardSmallArrow, 
+.cardBigArrow, 
+.cardSmallDownArrow, 
+.cardSmallArrowRes, 
+.cardSmallLeftArrowRes {
+     @apply relative;
+}
+
+.cardSmallArrow::after {
+     @apply absolute right-0 h-[40px] w-[63px];
+     content: "";
+     background: url('../images/icons/arrow-small.svg'); 
+     transform: translate(45px, 20px);
+}
+
+@media (max-width: 767px) {
+     .cardSmallArrow::after {
+          @apply absolute bottom-[-30px] left-[50%] h-[40px] w-[63px];
+          content: "";
+          background: url('../images/icons/arrow-small.svg'); 
+          transform: rotate(90deg) scaleY(-1) !important;
+     }
+}
+
+@media (max-width: 1280px) {
+     .cardSmallArrow::after{
+          transform: translate(45px, -10px);
+     }
+}
+
+@media (min-width: 1280px) {
+     .cardSmallDownArrow::after {
+          @apply absolute right-[12%] bottom-[-12%] h-[40px] w-[63px] rotate-90;
+          content: "";
+          background: url('../images/icons/arrow-small.svg');
+     }
+}
+
+.cardSmallArrowRes::after {
+     @apply absolute right-[40%] bottom-[-25%] h-[40px] w-[63px] rotate-90;
+     content: "";
+     background: url('../images/icons/arrow-small.svg');
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+     .cardSmallLeftArrowRes::after {
+          @apply absolute left-[-50px] h-[40px] w-[63px] rotate-180;
+          content: "";
+          background: url('../images/icons/arrow-small.svg');
+     }
+}
+
+@media (max-width: 767px) {
+     .cardSmallLeftArrowRes::after {
+          
+          @apply absolute left-[48%] bottom-[-38px] h-[40px] w-[63px] rotate-90 -scale-y-100;
+          content: "";
+          background: url('../images/icons/arrow-small.svg');
+     }
+}
+
+.cardBigArrow::after {
+     @apply absolute top-0 h-[134px] w-[103px];
+     content: "";
+     background: url('../images/icons/arrow-big.svg'); 
+     transform: translate(50%, -60%);
+}
+
+.social-icons {
+     @apply flex flex-col justify-center min-w-[32px];
+}
+
+.social-icons ul li {
+     @apply mb-6;
+}
+
+/* business works tabs  */
+    
+   .tab-list {
+     @apply h-[50px] flex items-center list-none text-lg p-0 m-0;
+   }
+   
+   .tabs {
+     @apply w-1/2 flex justify-center items-center bg-gray-200 relative cursor-pointer;
+   }
+   
+   .tabs:not(:last-child) {
+     @apply border-r border-gray-300;
+   }
+   
+   .active-tabs {
+     @apply bg-gray-100;
+   }
+   
+   .active-tabs::before {
+     @apply block absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-4 bg-blue-500;
+     content: "";
+   }
+   
+   .content {
+     @apply hidden bg-gray-100 p-10;
+   }
+   
+   .active-content {
+     @apply flex;
+   }

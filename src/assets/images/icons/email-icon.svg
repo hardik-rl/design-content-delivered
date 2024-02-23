@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.258" height="50.722" viewBox="0 0 61.258 50.722">
+  <defs>
+    <filter id="Icon_zocial-email" x="0" y="0" width="61.258" height="50.722" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#2a2a2a" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_zocial-email)">
+    <path id="Icon_zocial-email-2" data-name="Icon zocial-email" d="M.072,22.955V5.9q0-.03.09-.562l10.218,8.585L.193,23.547a2.469,2.469,0,0,1-.121-.592Zm1.356-18.8a1.32,1.32,0,0,1,.512-.089h27.52A1.735,1.735,0,0,1,30,4.157L19.755,12.771,18.4,13.837,15.716,16l-2.683-2.161-1.356-1.066ZM1.459,24.7l10.279-9.68,3.979,3.168,3.979-3.168L29.974,24.7a1.471,1.471,0,0,1-.512.089H1.941a1.387,1.387,0,0,1-.482-.089ZM21.051,13.926,31.24,5.341a1.738,1.738,0,0,1,.09.562V22.955a2.231,2.231,0,0,1-.09.592Z" transform="translate(13.93 5.93)" fill="#eb4f55"/>
+  </g>
+</svg>
