@@ -218,11 +218,11 @@ nav {
 /* business works tabs  */
     
    .tab-list {
-     @apply h-[50px] flex items-center list-none text-lg p-0 m-0;
+     @apply h-[50px] flex items-center list-none text-lg p-0 m-0 gap-8 flex-wrap justify-between;
    }
    
    .tabs {
-     @apply w-1/2 flex justify-center items-center bg-gray-200 relative cursor-pointer;
+     @apply flex justify-center items-center bg-gray-200 relative cursor-pointer ;
    }
    
    .tabs:not(:last-child) {
@@ -234,7 +234,7 @@ nav {
    }
    
    .active-tabs::before {
-     @apply block absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-4 bg-blue-500;
+     @apply block absolute top-[22px] left-1/2 transform -translate-x-1/2 w-full h-4 bg-blue-500;
      content: "";
    }
    
@@ -244,4 +244,8 @@ nav {
    
    .active-content {
      @apply flex;
+   }
+
+   .active-tabs::before {
+     height: 0.1rem;
    }
