@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  /* font-family: 'Quicksand'; */
+  @apply bg-isabelline text-quartz;
+}
+
+.btn-primary {
+  @apply bg-fireOpal px-8 py-2 rounded-lg text-white hover:opacity-[0.8] transition;
+  background: transparent linear-gradient(134deg, #d94c52 0%, #ff5a60f5 100%) 0%
+    0% no-repeat padding-box;
+  box-shadow: -4px -4px 8px #f7f0e9d6;
+}
+
+.btn-light {
+  @apply bg-[#F7F0E9] font-medium px-8 py-2 rounded-lg text-gray44 hover:opacity-[0.8] transition;
+  box-shadow: 4px 4px 8px #00000029;
+}
+
+/* font  */
+.font-ranika {
+  font-family: "Ranika";
+}
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-[0.24rem] h-[0.24rem];
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-[#f1f1f1];
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-[#888];
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#555];
+}
+
+/* title  */
+.title {
+  @apply text-[33px] leading-10 text-[#4b4b4b] relative font-bold;
+  font-family: "Ranika";
+}
+
+.title::after {
+  @apply left-0 top-[1.55rem] w-[16rem] h-[1.5rem] bg-no-repeat absolute z-[-1];
+  content: "";
+  background: url("../images/orange_underline1.png");
+}
+
+.title--center::after {
+  @apply left-0 right-0 mx-auto;
+}
+
+nav {
+  @apply flex items-center justify-between flex-wrap md:p-6 md:pl-12 relative;
+  /* background: #eee;
+     position: absolute;
+     width: 100%;
+     left: 0;
+     top: 0;
+     height: 100%;
+     z-index: 1; */
+}
+
+.nav-list {
+  @apply flex flex-col text-sm md:flex-grow;
+}
+
+.nav-list ul li {
+  @apply py-2;
+}
+
+.nav-list ul li::before {
+  content: "";
+  transform: translate(10px, 10px);
+  @apply absolute left-0 border-t border-black w-6;
+}
+
+.nav-list ul li::after {
+  content: "";
+  transform: translate(10px, -38px);
+  @apply absolute left-0 border-l border-black h-12;
+}
+
+.details-card {
+  @apply px-8 py-8 pl-[3.5rem] rounded-[10px] relative;
+  box-shadow: 3px 5px 15px #85858529;
+}
+
+.details-card::after {
+  @apply bg-no-repeat right-0 top-0 w-[6rem] h-[6rem] absolute;
+  content: "";
+  background: url("../images/icons/listing-ball.svg");
+  transform: translate(52px, -50px);
+}
+
+@media (max-width: 767px) {
+  .details-card::after {
+    @apply right-[23px] top-[15px] w-[4rem] h-[4rem];
+    background: url("../images/icons/small-listing-ball.svg");
+  }
+}
+
+.details-card ul li {
+  @apply mb-7 relative text-sm last:mb-0;
+}
+
+.details-card ul li::before {
+  @apply left-[-27px] top-1 w-4 h-4 bg-no-repeat absolute;
+  content: "";
+  background: url("../images/icons/checkmark-circle.svg");
+}
+
+.data-lists {
+  @apply grid grid-cols-5 lg:!grid-cols-4 p-6 gap-[1.8rem] maxMd:grid-cols-3 maxSm:!grid-cols-2;
+}
+
+.data-lists li {
+  @apply text-sm;
+}
+
+.how-works {
+  @apply flex gap-7 w-full mt-6;
+}
+
+.how-works .card {
+  @apply p-6 w-[33%] maxLg:w-[50%] rounded-lg flex flex-col justify-end shadow-cardShadow;
+}
+
+.how-works .card h2 {
+  @apply text-[33px] leading-10 font-ranika relative;
+}
+
+.how-works .card p {
+  @apply mt-2;
+}
+
+.how-works .card span {
+  @apply text-[#EB4F55] text-6xl maxXl:text-3xl absolute right-0 top-[-20px] font-ranika;
+}
+
+.cardSmallArrow,
+.cardBigArrow,
+.cardSmallDownArrow,
+.cardSmallArrowRes,
+.cardSmallLeftArrowRes {
+  @apply relative;
+}
+
+.cardSmallArrow::after {
+  @apply absolute right-0 h-[40px] w-[63px];
+  content: "";
+  background: url("../images/icons/arrow-small.svg");
+  transform: translate(45px, 20px);
+}
+
+@media (max-width: 767px) {
+  .cardSmallArrow::after {
+    @apply absolute bottom-[-30px] left-[50%] h-[40px] w-[63px];
+    content: "";
+    background: url("../images/icons/arrow-small.svg");
+    transform: rotate(90deg) scaleY(-1) !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  .cardSmallArrow::after {
+    transform: translate(45px, -10px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .cardSmallDownArrow::after {
+    @apply absolute right-[12%] bottom-[-12%] h-[40px] w-[63px] rotate-90;
+    content: "";
+    background: url("../images/icons/arrow-small.svg");
+  }
+}
+
+.cardSmallArrowRes::after {
+  @apply absolute right-[40%] bottom-[-25%] h-[40px] w-[63px] rotate-90;
+  content: "";
+  background: url("../images/icons/arrow-small.svg");
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .cardSmallLeftArrowRes::after {
+    @apply absolute left-[-50px] h-[40px] w-[63px] rotate-180;
+    content: "";
+    background: url("../images/icons/arrow-small.svg");
+  }
+}
+
+@media (max-width: 767px) {
+  .cardSmallLeftArrowRes::after {
+    @apply absolute left-[48%] bottom-[-38px] h-[40px] w-[63px] rotate-90 -scale-y-100;
+    content: "";
+    background: url("../images/icons/arrow-small.svg");
+  }
+}
+
+.cardBigArrow::after {
+  @apply absolute top-0 h-[134px] w-[103px];
+  content: "";
+  background: url("../images/icons/arrow-big.svg");
+  transform: translate(50%, -60%);
+}
+
+.social-icons {
+  @apply flex flex-col justify-center min-w-[32px];
+}
+
+.social-icons ul li {
+  @apply mb-6;
+}
+
+/* business works tabs  */
+
+.tab-list {
+  @apply h-[50px] overflow-x-auto flex items-center list-none text-lg p-0 m-0 gap-8 justify-between;
+}
+
+.tabs {
+  @apply text-sm flex justify-center items-center relative cursor-pointer whitespace-nowrap;
+}
+
+.active-tabs {
+  @apply font-bold;
+}
+.active-tabs::before {
+  @apply block absolute top-[22px] left-1/2 transform -translate-x-1/2 w-full h-2 bg-black;
+  content: "";
+}
+
+.bulb-shape::before {
+  content: "";
+  background: url("/src/assets/images/icons/bulb.svg") no-repeat;
+  @apply h-16 w-full absolute right-[-40px] bg-right top-[-40px] bg-contain;
+}
+
+.triangle_down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #2f2f2f;
+  font-size: 0;
+  line-height: 0;
+  float: left;
+}
+
+.footer-social-media img {
+  @apply w-10 h-6;
+}
+
+.content {
+  @apply hidden md:mt-10 mt-5;
+}
+
+.active-content {
+  @apply flex flex-wrap gap-5;
+}
+.content img {
+  @apply w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(25%-20px)] cursor-pointer;
+}
+
+.active-tabs::before {
+  height: 0.1rem;
+}
+
+.price-tabs .active-tabs::before {
+     @apply bg-transparent;
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43.292" height="54.817" viewBox="0 0 43.292 54.817">
+  <defs>
+    <filter id="Icon_awesome-facebook-f" x="0" y="0" width="43.292" height="54.817" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#2a2a2a" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_awesome-facebook-f)">
+    <path id="Icon_awesome-facebook-f-2" data-name="Icon awesome-facebook-f" d="M14.03,13.96l.689-4.491H10.41V6.554a2.246,2.246,0,0,1,2.532-2.426H14.9V.3A23.892,23.892,0,0,0,11.423,0C7.874,0,5.555,2.151,5.555,6.045V9.468H1.609V13.96H5.555V24.817H10.41V13.96Z" transform="translate(12.39 10)" fill="#eb4f55"/>
+  </g>
+</svg>
